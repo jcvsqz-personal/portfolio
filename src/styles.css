@@ -1,1 +1,76 @@
 /* You can add global styles to this file, and also import other style files */
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Lucida Console", Courier, monospace;
+}
+
+.slider{
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100%;
+  background: lightblue;
+  z-index: -1;
+}
+
+nav{
+  display: grid;
+  grid-template-columns: 10% 1fr 1fr 10%;
+  min-height: 5vh;
+  color: black;
+  align-items: center;
+}
+
+#logo{
+  grid-column: 2/3;
+  font-size: 24px;
+}
+
+.hamburger{
+  justify-self: end;
+}
+
+section{
+  display: flex;
+  height: 90vh;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero {
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+
+.hero img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.headline {
+  position: absolute;
+  text-align: center;
+  top: 78%;
+  left: 7%;
+  font-size: 30px;
+  /* transform: translate(50%, 50%); */
+  color: aliceblue;
+  z-index: 3;
+}
+
+.hero::after{
+  content: "";
+  background: black;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  opacity: 0.3;
+  left: 0;
+}
+
